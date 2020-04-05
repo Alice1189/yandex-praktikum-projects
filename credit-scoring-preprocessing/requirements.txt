@@ -1,0 +1,2 @@
+pymystem3==0.2.0
+pandas==0.25.2

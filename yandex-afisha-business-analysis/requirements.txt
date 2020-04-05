@@ -1,0 +1,6 @@
+pandasql==0.7.3
+seaborn==0.9.0
+matplotlib==3.1.1
+numpy==1.17.2
+pandas==0.25.2
+ipython==7.13.0
