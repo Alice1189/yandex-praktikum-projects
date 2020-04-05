@@ -10,7 +10,6 @@ import base64
 import re
 
 ipynb_names = ['airline-analytics.ipynb',
-               'airline-analytics_(parser-SQL).ipynb',
                'communications-statistical-analysis.ipynb',
                'credit-scoring-preprocessing.ipynb',
                'e-commerce-a-b-testing.ipynb',
