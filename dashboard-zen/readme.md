@@ -1,5 +1,9 @@
-# Дашборд взаимодействие пользователей с карточками Яндекс.Дзен
+# Дашборд "Взаимодействие пользователей с карточками Яндекс.Дзен"
 
+Дашборд выполнен в двух вариантах: для запуска на локальной машине с применением библиотеки dash и в Tableau.  
+Дашборд в Tableau Public размещён по ссылке: [public.tableau.com](https://public.tableau.com/profile/alyssa7686#!/vizhome/Zen_Dashboard/Dashboard1?publish=yes)
+
+## Инструкция для запуска дашборда на локальной машине (в случае, когда есть доступ к базе данных и нужно периодически формировать дашборд для отчёта)
 Должен быть установлен PostgreSQL:
 ```bash
 sudo apt update  
@@ -8,7 +12,7 @@ sudo apt install postgresql postgresql-contrib
 sudo service postgresql start  
 service postgresql status
 ```
-## Подготовка базы данных
+### Подготовка базы данных
 1. создать базу данных `zen`:
 ```bash
 createdb zen --encoding='utf-8'
@@ -52,7 +56,7 @@ GRANT ALL PRIVILEGES ON TABLE dash_engagement TO my_user;
 GRANT USAGE, SELECT ON SEQUENCE dash_visits_record_id_seq TO my_user;
 GRANT USAGE, SELECT ON SEQUENCE dash_engagement_record_id_seq TO my_user;
 ```
-## Установка расписания и первый запуск
+### Установка расписания и первый запуск
 Файл пайплайна называется `zen_pipeline.py` и должен храниться на сервере в папке `/home/test_user/code/`.  
 Чтобы он запускался каждый день в 3:15 утра по Москве, нужно:
 1. создать папку `logs` в папке `/home/test_user/`
@@ -72,7 +76,7 @@ GRANT USAGE, SELECT ON SEQUENCE dash_engagement_record_id_seq TO my_user;
 python .\zen_pipeline.py
 ```
 
-## Использование
+### Использование
 
 Теперь в любое время можно посмотреть dashboard запустив скрипт
 ```bash
